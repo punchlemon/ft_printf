@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: retanaka <retanaka@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 16:36:43 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/04 00:10:52 by retanaka         ###   ########.fr       */
+/*   Created: 2023/10/09 08:19:32 by retanaka          #+#    #+#             */
+/*   Updated: 2023/10/11 06:40:15 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
+#include "libft.h"
 
-# define FT_PRINTF_H
-
-#include <limits.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-#endif
+int	ft_isascii(int c)
+{
+	return (0 <= c && c <= 127);
+}
