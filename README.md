@@ -1,6 +1,6 @@
 # Installation
 ```bash
-git clone [https://github.com/punchlemon/ft_printf](https://github.com/punchlemon/ft_printf)
+git clone https://github.com/punchlemon/ft_printf
 ```
 ```bash
 cd ft_printf
