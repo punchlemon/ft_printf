@@ -1,3 +1,6 @@
 [submodule "libft"]
 	path = libft
 	url = https://github.com/punchlemon/libft
+[submodule "test_ft_printf"]
+	path = test_ft_printf
+	url = https://github.com/punchlemon/test_ft_printf
