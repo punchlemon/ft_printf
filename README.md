@@ -1,16 +1,6 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    README.md                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: retanaka <retanaka@student.42tokyo.jp>     +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/30 14:41:03 by retanaka          #+#    #+#              #
-#    Updated: 2024/05/30 14:41:12 by retanaka         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-# Installation
+# ft_printf
+This is Project to recreate the function 'printf'.
+## Installation
 ```bash
 git clone https://github.com/punchlemon/ft_printf
 ```
@@ -23,7 +13,7 @@ git submodule init
 ```bash
 git submodule update --remote --recursive
 ```
-# Test
+## Test
 ```bash
 cd test_ft_printf
 ```
