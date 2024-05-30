@@ -1,6 +1,15 @@
 # Installation
 ```bash
-git clone https://github.com/punchlemon/ft_printf ; cd ft_printf ; git submodule init ; git submodule update --remote --recursive
+git clone https://github.com/punchlemon/ft_printf
+```
+```bash
+cd ft_printf
+```
+```bash
+git submodule init
+```
+```bash
+git submodule update --remote --recursive
 ```
 # Test
 ```bash
