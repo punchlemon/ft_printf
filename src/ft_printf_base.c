@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: retanaka <retanaka@student.42.fr>          +#+  +:+       +#+        */
+/*   By: retanaka <retanaka@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 13:53:02 by retanaka          #+#    #+#             */
 /*   Updated: 2024/05/14 12:17:16 by retanaka         ###   ########.fr       */
@@ -13,9 +13,9 @@
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_putchar(char s)
+int	ft_putchar(char c)
 {
-	return (write(1, &s, 1));
+	return (write(1, &c, 1));
 }
 
 int	ft_putstr(char *s)

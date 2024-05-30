@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
+/*   By: retanaka <retanaka@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:15:53 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/14 14:02:17 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/30 12:38:40 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putarg_check(char format, va_list args, int *count)
+int	ft_putarg_check(char format, va_list *args, int *count)
 {
 	if (format == '%')
 		ft_putchar_check('%', count);
 	if (format == 'c')
-		ft_putchar_check((char)va_arg(args, int), count);
+		ft_putchar_check((char)va_arg(*args, int), count);
 	if (format == 's')
-		ft_putstr_check((char *)va_arg(args, char *), count);
+		ft_putstr_check((char *)va_arg(*args, char *), count);
 	if (format == 'p')
-		ft_putptr_check((unsigned long long)va_arg(args, void *), count);
+		ft_putptr_check((unsigned long long)va_arg(*args, void *), count);
 	if (format == 'o')
-		ft_putoct_check(va_arg(args, int), count);
+		ft_putoct_check(va_arg(*args, int), count);
 	if (format == 'u' || format == 'd' || format == 'i')
-		ft_putdec_check(va_arg(args, int), format, count);
+		ft_putdec_check(va_arg(*args, int), format, count);
 	if (format == 'x' || format == 'X')
-		ft_puthex_check(va_arg(args, int), format, count);
+		ft_puthex_check(va_arg(*args, int), format, count);
 	return (*count);
 }
 
@@ -43,7 +43,7 @@ int	ft_printf(const char *source, ...)
 	while (source[i])
 	{
 		if (source[i] == '%')
-			ft_putarg_check(source[++i], args, &count);
+			ft_putarg_check(source[++i], &args, &count);
 		else
 			ft_putchar_check(source[i], &count);
 		if (count == -1)
