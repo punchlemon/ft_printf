@@ -29,5 +29,6 @@ void	get_digit(unsigned long long n, int *digit, int base);
 char	get_place_num(unsigned long long n, int digit, int base);
 void	remove_place_num(unsigned long long *n, int digit, int base);
 int		ft_putnumber_check(unsigned long long n, char f, int *count, int base);
+int		ft_printf(const char *str, ...);
 
 #endif
