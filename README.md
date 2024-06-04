@@ -8,10 +8,7 @@ git clone https://github.com/punchlemon/ft_printf
 cd ft_printf
 ```
 ```bash
-git submodule init
-```
-```bash
-git submodule update --remote --recursive
+git submodule update --init --remote --recursive
 ```
 ## Test
 ```bash
