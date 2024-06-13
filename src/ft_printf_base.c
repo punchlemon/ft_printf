@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_putchar(char c)
 {
@@ -20,7 +19,12 @@ int	ft_putchar(char c)
 
 int	ft_putstr(char *s)
 {
+	size_t	i;
+
 	if (s == NULL)
 		return (write(1, "(null)", 6));
-	return (write(1, s, ft_strlen(s)));
+	i = -1;
+	while (*(s + ++i) != '\0')
+		;
+	return (write(1, s, i));
 }

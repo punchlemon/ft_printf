@@ -12,12 +12,11 @@
 
 NAME		=	libftprintf.a
 INCLUDE		=	include
-LIBFT		=	libft
 SRC_DIR		=	src/
 OBJ_DIR		=	obj/
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
-IFLAGS		=	-I $(INCLUDE) -I $(LIBFT)
+IFLAGS		=	-I $(INCLUDE)
 RM			=	rm -f
 AR			=	ar rcs
 
@@ -48,9 +47,6 @@ OBJ_DIR_FLAG=	.obj_dir_exists
 all:			$(NAME)
 
 $(NAME):		$(OBJ)
-				@make bonus -C $(LIBFT)
-				@cp libft/libft.a .
-				@mv libft.a $(NAME)
 				@$(AR) $(NAME) $(OBJ)
 				@echo "$(GREEN)ft_printf compiled!$(DEF_COLOR)"
 
@@ -62,13 +58,10 @@ $(OBJ_DIR_FLAG):
 				@mkdir -p $(OBJ_DIR)
 
 clean:
-				@make clean -C $(LIBFT)
 				@$(RM) -rf $(OBJ_DIR)
 				@echo "$(BLUE)ft_printf object files cleaned!$(DEF_COLOR)"
 
 eclean:
-				@$(RM) $(LIBFT)/libft.a
-				@echo "$(CYAN)libft executable files cleaned!$(DEF_COLOR)"
 				@$(RM) $(NAME)
 				@echo "$(CYAN)ft_printf executable files cleaned!$(DEF_COLOR)"
 
