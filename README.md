@@ -1,5 +1,6 @@
 # ft_printf
-This is Project to recreate the function 'printf'.
+## Overview
+This Project is to reproduce the function 'printf'.
 ## Installation
 ```bash
 git clone https://github.com/punchlemon/ft_printf
@@ -8,7 +9,7 @@ git clone https://github.com/punchlemon/ft_printf
 cd ft_printf
 ```
 ```bash
-git submodule update --init --remote --recursive
+sh init.sh
 ```
 ## Test
 ```bash
